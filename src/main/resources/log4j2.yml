@@ -1,0 +1,21 @@
+Configuration:
+  name: CSLogger
+
+  Appenders:
+    Console:
+      name: terminal
+      #target: SYSTEM_OUT
+      PatternLayout:
+        pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
+
+  Loggers:
+      Root:
+        level: debug
+        AppenderRef:
+          - ref: terminal
+      #Logger:
+        #- name: com.cs.eventproj
+          #level: debug
+          #AppenderRef:
+            #- ref: terminal
+              #level: trace
